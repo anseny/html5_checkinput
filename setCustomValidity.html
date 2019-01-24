@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="get">
+			<input type="url" oninput="checkit(this)">
+			<input type="submit" value="提交">
+		</form>
+		<script>
+			function checkit(obj) {
+				var it = obj.validity;
+				//补充完整
+                if(it.typeMismatch===true){
+                    obj.setCustomValidity("请输入带http://的正确地址！")
+                }else{
+                    obj.setCustomValidity("")
+                }
+			}
+		</script>
+	</body>
+</html>
