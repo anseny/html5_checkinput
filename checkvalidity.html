@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+		<title></title>
+	</head>
+	<body>
+		<form action="">
+			<input type="text" id="username" value="123" required pattern="^\d{}">
+		</form>
+		<script>
+			var names = document.getElementById("username");
+			//补充完整！
+            if(names.checkValidity()){
+                alert("符合")
+            }else{
+                alert("不符合")
+            }
+		</script>
+	</body>
+</html>
